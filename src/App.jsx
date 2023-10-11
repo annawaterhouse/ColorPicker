@@ -1,8 +1,10 @@
 import { useState } from "react";
 
 const Color = ({color, setSelectedColor}) => {
-  return <div className={color}
-    onClick={() => setSelectedColor(color)}></div>
+  return <div 
+    className={color}
+    onClick={() => setSelectedColor(color)}
+    ></div>
 }
 
 const App = () => {
@@ -16,9 +18,9 @@ const App = () => {
         <div className={selectedColor}>{selectedColor}</div>
       </div>
       <div id="colors-list">
-        <Color color="yellow" setSelectedColor={setSelectedColor}/>
-        <Color color="blue" />
-        <Color color="green" />
+        <Color color="yellow" setSelectedColor={setSelectedColor} />
+        <Color color="blue" setSelectedColor={setSelectedColor} />
+        <Color color="green" setSelectedColor={setSelectedColor} />
       </div>
     </div>
   );
